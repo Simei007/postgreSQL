@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Escolar</title>
+</head>
+<body>
+    <h1>📊 Relatório de Desempenho</h1>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Média das Notas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for disciplina in disciplinas %}
+            <tr>
+                <td>{{ disciplina.nome }}</td>
+                <td>{{ disciplina.media | round(2) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p><a href="/">← Voltar para a lista de alunos</a></p>
+</body>
+</html>

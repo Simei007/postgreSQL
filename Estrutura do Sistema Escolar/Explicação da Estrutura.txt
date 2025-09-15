@@ -1,0 +1,31 @@
+🧱 Camada 1: Banco de Dados (PostgreSQL)
+📁 Pasta: sql/
+- 01_criar_tabelas.sql → Criação das tabelas
+- 02_chaves_estrangeiras.sql → Adição das constraints
+- 03_inserir_dados.sql → Dados fictícios
+- 04_views.sql → Criação de views como boletim_aluno
+- 05_triggers.sql → Validação de nota
+- 06_functions.sql → Funções como media_por_aluno
+- 07_consultas_teste.sql → Consultas para verificar tudo
+
+🐍 Camada 2: Automação com Python + SQLAlchemy
+📁 Pasta: automacao/
+- config.py → Conexão com PostgreSQL
+- models.py → Mapeamento das tabelas com SQLAlchemy
+- boletim.py → Geração de boletins por aluno
+- exportador.py → Exporta para Excel ou PDF
+- relatorios.py → Gráficos e análises com matplotlib ou seaborn
+
+🌐 Camada 3: Interface Web (Flask)
+📁 Pasta: web/
+- app.py → Arquivo principal da aplicação
+- templates/ → HTMLs (ex: alunos.html, disciplinas.html)
+- static/ → CSS, JS, imagens
+- routes/ → Rotas separadas (ex: aluno_routes.py, nota_routes.py)
+- forms.py → Formulários para cadastro e edição
+
+📊 Camada 4: Dashboard (Power BI ou Metabase)
+📁 Pasta: dashboard/
+- painel.pbix → Arquivo do Power BI
+- queries.sql → Consultas usadas nos gráficos
+- documentacao.md → Explicação dos indicadores e visualizações

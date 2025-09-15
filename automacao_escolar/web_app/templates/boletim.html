@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Boletim de {{ aluno.nome }}</title>
+</head>
+<body>
+    <h1>📘 Boletim de {{ aluno.nome }}</h1>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Nota</th>
+                <th>Data da Avaliação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for nota in notas %}
+            <tr>
+                <td>{{ nota.disciplina.nome }}</td>
+                <td>{{ nota.nota }}</td>
+                <td>{{ nota.data_avaliacao.strftime('%d/%m/%Y') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p><a href="/">← Voltar para a lista de alunos</a></p>
+</body>
+</html>
